@@ -4,7 +4,7 @@ import {  motion,
   useScroll,
   useSpring,
   useTransform,
-  MotionValue} from "framer-motion/dist/framer-motion";
+  MotionValue} from "framer-motion";
 import Progress_bar from '../components/ProgressBar/ProgressBar';
 import { Link } from 'react-router-dom';
 import BookIcon from '@mui/icons-material/Book';

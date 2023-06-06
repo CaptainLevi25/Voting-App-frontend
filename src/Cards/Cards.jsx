@@ -1,21 +1,26 @@
 import React, { forwardRef } from 'react'
-
+import "./Cards.css"
 import {  motion,
   useScroll,
   useSpring,
   useTransform,
   MotionValue} from "framer-motion/dist/framer-motion";
 import Progress_bar from '../components/ProgressBar/ProgressBar';
-
-export default function Cards({giveeVotee}) {
+import { Link } from 'react-router-dom';
+import BookIcon from '@mui/icons-material/Book';
+import InstagramIcon from '@mui/icons-material/Instagram';
+export default function Cards({giveeVotee,pic,numm}) {
   return (
 <>
 
   
 <div  className="wrap">
+  <div className="numberr">
+    <h1>#{numm}</h1>
+  </div>
    <div className="card ">
      <img
-       src="https://lh3.googleusercontent.com/ytP9VP86DItizVX2YNA-xTYzV09IS7rh4WexVp7eilIcfHmm74B7odbcwD5DTXmL0PF42i2wnRKSFPBHlmSjCblWHDCD2oD1oaM1CGFcSd48VBKJfsCi4bS170PKxGwji8CPmehwPw=w200-h247-no"
+       src={pic}
        alt="Person"
        class="card__image"
      />
@@ -27,31 +32,46 @@ export default function Cards({giveeVotee}) {
      </div>
      <ul class="social-icons">
        <li>
-         <a href="#">
-           <i class="fa fa-instagram"></i>
+         <a href="#section0">
+           <i class="fa fa-instagram">C1</i>
          </a>
        </li>
        <li>
-         <a href="#">
-           <i class="fa fa-twitter"></i>
+         <a href="#section1">
+           <i class="fa fa-twitter">C2</i>
          </a>
        </li>
        <li>
-         <a href="#">
-           <i class="fa fa-linkedin"></i>
+         <a href="#section3">
+           <i class="fa fa-linkedin">C3</i>
          </a>
        </li>
        <li>
-         <a href="#">
-           <i class="fa fa-codepen"></i>
+         <a href="#section4">
+           <i class="fa fa-codepen">C4</i>
          </a>
        </li>
      </ul>
      <button class="btn draw-border" onClick={giveeVotee}>Vote</button>
      {/* <button class="btn draw-border">Message</button> */}
    </div>
+
+    <div className='rainbow1'>
+  
+      <div className="rightcardchild">
+    
+
+     <a target="_blank" href="https://library.bjp.org/jspui/handle/123456789/2988">
+
+     <BookIcon className="iconss"fontSize='large'/> <span>Go through my manifesto</span>
+     </a>
+     <a target="_blank" href="https://library.bjp.org/jspui/handle/123456789/2988">
+
+     <InstagramIcon className="iconss"fontSize='large'/> <span>Instagram</span>
+     </a>
+      </div>
+    </div>
  </div>  
-   <Progress_bar className="progress" bgcolor="#99ff66" progress="50" height={50} />
 </>   
 )
 }

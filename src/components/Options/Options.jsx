@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import "./Options.css";
 import Cards from "../../Cards/Cards";
-
-import { motion, useAnimation } from "framer-motion/dist/framer-motion";
+//
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import LockOpenIcon from '@mui/icons-material/LockOpen';

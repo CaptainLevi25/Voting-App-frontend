@@ -16,7 +16,7 @@ import {
   useSpring,
   useTransform,
   MotionValue,
-} from "framer-motion/dist/framer-motion";
+} from "framer-motion";
 
 import { Parallax } from "react-scroll-parallax";
 

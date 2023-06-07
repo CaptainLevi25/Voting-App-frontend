@@ -108,20 +108,22 @@
     margin-bottom: 150px;
     display: flex;
     flex-direction: column;
-    background-color: darkblue;
+    /* background-color: darkblue; */
     height: 150px;
     width: 600px;
     border-radius: 20px;
     border: 3px solid rgb(16, 15, 15);
-	box-shadow:
-    inset 0 0 50px #fff,
-    inset 20px 0 80px #f0f,
-    inset -20px 0 80px #0ff,
-    inset 20px 0 300px #f0f,
-    inset -20px 0 300px #0ff,
-    0 0 50px #fff,
-    -10px 0 80px #f0f,
-    10px 0 80px #0ff;
+ border: 0px solid rgba(100, 100, 100, 1);
+  border-radius: 4px;
+  background: linear-gradient(
+    50deg,
+    rgba(255, 255, 255, 0.4) 12%,
+    rgba(255, 255, 255, 0.1) 77%
+  );
+  /* background-blend-mode: ; */
+  box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 h1{
     color: aliceblue;
@@ -153,17 +155,17 @@ span{
 	}
 }
 @keyframes color {
-	0%   { background: #33CCCC; }
-	20%  { background: #33CC36; }
-	40%  { background: #B8CC33; }
-	60%  { background: #FCCA00; }
-	80%  { background: #33CC36; }
-	100% { background: #33CCCC; }
+	0%   { background: #c1c1c1; }
+	20%  { background: #a9aaa9; }
+	40%  { background: #3c3c3c; }
+	60%  { background: #1f1f1f; }
+	80%  { background: #a2a2a2; }
+	100% { background: #c1c1c1; }
   }
 .rainbow {
 	position: relative;
 	z-index: 0;
-	width: 800px;
+	width: 990px;
 	height: 100px;
 	border-radius: 10px;
 	overflow: hidden;
@@ -186,11 +188,11 @@ span{
 		top: -50%;
 		width: 200%;
 		height: 200%;
-		background-color: #399953;
+		background-color: #272727;
 		background-repeat: no-repeat;
 		background-size: 50% 50%, 50% 50%;
 		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-		background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+		background-image: linear-gradient(#0d0e0d, #313131), linear-gradient(#3b3b3b, #000000), linear-gradient(#333232, #191111), linear-gradient(#000000, #49577204);
 		animation: rotate 4s linear infinite;
 	}
 	
@@ -220,4 +222,9 @@ display: flex;
 }
 .muu2{
 margin-top: 20px;
+}
+.sppan{
+	margin-left: 20px;
+	margin-right: 20px;
+	color: #6b4c4a;
 }

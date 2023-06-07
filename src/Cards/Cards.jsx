@@ -4,12 +4,12 @@ import {  motion,
   useScroll,
   useSpring,
   useTransform,
-  MotionValue} from "framer-motion";
+  MotionValue} from "framer-motion/dist/framer-motion";
 import Progress_bar from '../components/ProgressBar/ProgressBar';
 import { Link } from 'react-router-dom';
 import BookIcon from '@mui/icons-material/Book';
 import InstagramIcon from '@mui/icons-material/Instagram';
-export default function Cards({giveeVotee,pic,numm}) {
+export default function Cards({giveeVotee,pic,numm,Name,Age,Quality}) {
   return (
 <>
 
@@ -24,11 +24,11 @@ export default function Cards({giveeVotee,pic,numm}) {
        alt="Person"
        class="card__image"
      />
-     <p class="card__name">Lily-Grace Colley</p>
+     <p class="card__name">Candidate #{numm}</p>
      <div class="grid-container">
-       <div class="grid-child-posts">156 Post</div>
+       <div class="grid-child-posts"></div>
 
-       <div class="grid-child-followers">1012 Likes</div>
+       <div class="grid-child-followers"></div>
      </div>
      <ul class="social-icons">
        <li>
@@ -59,16 +59,20 @@ export default function Cards({giveeVotee,pic,numm}) {
     <div className='rainbow1'>
   
       <div className="rightcardchild">
-    
+            <ul>
+              <li><h2>Name - {Name}</h2></li>
+              <li><h2>Age - {Age}</h2></li>
+              <li><h2>Qualities - {Quality}</h2></li>
+            </ul>
 
-     <a target="_blank" href="https://library.bjp.org/jspui/handle/123456789/2988">
+     {/* <a target="_blank" href="https://library.bjp.org/jspui/handle/123456789/2988">
 
      <BookIcon className="iconss"fontSize='large'/> <span>Go through my manifesto</span>
      </a>
      <a target="_blank" href="https://library.bjp.org/jspui/handle/123456789/2988">
 
      <InstagramIcon className="iconss"fontSize='large'/> <span>Instagram</span>
-     </a>
+     </a> */}
       </div>
     </div>
  </div>  

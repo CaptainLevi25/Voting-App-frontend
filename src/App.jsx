@@ -16,7 +16,7 @@ import {
   useSpring,
   useTransform,
   MotionValue,
-} from "framer-motion";
+} from "framer-motion/dist/framer-motion";
 
 import { Parallax } from "react-scroll-parallax";
 
@@ -208,14 +208,16 @@ function App() {
              <div className="heaa">
               <span>
               <HourglassFullOutlinedIcon fontSize="large"/>
-             <h1>Decentralised Voting App</h1>
+             <h1  id="sp1">Decentralised Voting App</h1>
             
               </span>
               </div> 
           <div class="content">
-            <button className="button" onClick={connecttometamask}>
-               <div className="connn"><img width="390px" height="100px"src="https://user-images.githubusercontent.com/35871990/52588870-8147e000-2e0b-11e9-8f5e-903fd83aec15.png" alt="" srcset="" /></div>
-            </button>
+          <button class="metamask-button" onClick={connecttometamask}>
+        <span class="metamask-logo"></span>
+        Connect to MetaMask
+      </button> 
+            <span className= "sp"> <h2>make sure metamask extension is installed in your browser</h2></span>
           </div>
             </div>
         </>
@@ -232,7 +234,7 @@ function App() {
                 {/* <h1>{totalVote? totalVote.words[0]:"hello"}</h1>
                 <button onClick={totalVote_f}>total votes</button> */}
                 {/* <h1>{voted?voted.words[0]:"hello"}</h1> */}
-                <Options accname={  account? account: "not connected"} giveeVote0= {giveVote_f0} giveeVote1= {giveVote_f1} giveeVote2= {giveVote_f3} giveeVote3= {giveVote_f3} totalVotee={totalVote? totalVote:"0"} mostVotee={mostVote? mostVote:"hello"}/>
+                <Options accname={  account? account: "not connected"} giveeVote0= {giveVote_f0} giveeVote1= {giveVote_f1} giveeVote2= {giveVote_f3} giveeVote3= {giveVote_f3} totalVotee={totalVote? totalVote:"0"} mostVotee={mostVote? mostVote:"C#01"}/>
                
             </div>
           </div>

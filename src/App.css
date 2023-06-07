@@ -201,3 +201,80 @@
   justify-content: center;
   align-items: center;
 }
+.metamask-button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  height: 80px;
+  width: 350px;
+  border: 3px solid black;
+  border-radius: 24px;
+  margin-left: 90px;
+}
+
+.metamask-button:hover {
+  background-color: #313131;
+}
+
+.metamask-logo {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-image: url('https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/metamask-icon.svg'); /* Replace with the path to your MetaMask logo image */
+  background-size: cover;
+  animation: logo-animation 2s infinite;
+}
+
+@keyframes logo-animation {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+.sp{
+  border: 3px solid rgb(16, 15, 15);
+  border: 0px solid rgba(100, 100, 100, 1);
+   border-radius: 4px;
+   background: linear-gradient(
+     50deg,
+     rgba(255, 255, 255, 0.4) 12%,
+     rgba(255, 255, 255, 0.1) 77%
+   );
+   /* background-blend-mode: ; */
+   box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+   backdrop-filter: blur(5px);
+   -webkit-backdrop-filter: blur(5px);
+}
+#sp1{
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(16, 15, 15);
+  border: 0px solid rgba(100, 100, 100, 1);
+   border-radius: 4px;
+   background: linear-gradient(
+     50deg,
+     rgba(255, 255, 255, 0.4) 12%,
+     rgba(255, 255, 255, 0.1) 77%
+   );
+   /* background-blend-mode: ; */
+   box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+   backdrop-filter: blur(5px);
+   -webkit-backdrop-filter: blur(5px);
+}

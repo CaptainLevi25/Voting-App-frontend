@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import "./Options.css";
 import Cards from "../../Cards/Cards";
-//
-import { motion, useAnimation } from "framer-motion";
+
+import { motion, useAnimation } from "framer-motion/dist/framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import LockOpenIcon from '@mui/icons-material/LockOpen';
@@ -24,7 +24,7 @@ const Pagefirst = ({ accname,totalVotee,mostVotee }) => {
 
       <div className="heading">
         <HourglassFullOutlinedIcon className="hour" fontSize="large"/>
-        <h1>WELCOME TO THE DECANTRALIZED VOTING APP</h1>
+        <h1>WELCOME TO THE DECENTRALIZED VOTING APP</h1>
         <span>
           <LockOpenIcon fontSize="large"/>
           <h4> {accname}</h4>
@@ -53,15 +53,15 @@ const Pagefirst = ({ accname,totalVotee,mostVotee }) => {
           </h1></div> 
           </div>
       <div className="rainbow">
-      <a className="hello"href="#section1" class="btn-flip" data-back="Vote" data-front="BJP"></a>
-        <span><h1>VS</h1></span>
+      <a className="hello"href="#section0" class="btn-flip" data-back="Vote" data-front="Candidate#01"></a>
+        <span className="sppan"><h1>  VS  </h1></span>
 
-        <a className="hello"href="#section1" class="btn-flip" data-back="Vote" data-front="Congress"></a>
-        <span><h1>VS</h1></span>
-        <a className="hello"href="#section1" class="btn-flip" data-back="Vote" data-front="AAP"></a>
-        <span><h1>VS</h1></span>
+        <a className="hello"href="#section1" class="btn-flip" data-back="Vote" data-front="Candidate#02"></a>
+        <span className="sppan"><h1>  VS  </h1></span>
+        <a className="hello"href="#section3" class="btn-flip" data-back="Vote" data-front="Candidate#03"></a>
+        <span className="sppan"><h1>  VS  </h1></span>
        
-        <a className="hello"href="#section1" class="btn-flip" data-back="Vote" data-front="TMC"></a>
+        <a className="hello"href="#section4" class="btn-flip" data-back="Vote" data-front="Candidate#04"></a>
        
        
       </div>
@@ -91,7 +91,7 @@ const Box2 = ({ accname,totalVotee,mostVotee }) => {
       initial="hidden"
       animate={control}
     >
-      <Pagefirst accname={accname} totalVotee={totalVotee} mostVotee={mostVotee}/>
+      <Pagefirst accname={accname} totalVotee={totalVotee} mostVotee={mostVotee} />
     </motion.div>
   );
 };
@@ -107,7 +107,8 @@ const Box0 = ({ giveeVote0,numm }) => {
       control.start("hidden");
     }
   }, [control, inView]);
-    var pic0= "/Videos/img1.jpg"
+    
+  var pic0= "https://play-lh.googleusercontent.com/SGvg-hJIrzsUgWr4vYB7HX-1ZXjx6djJLaH1TAFTblmfK9PoG0WU0RNheoRD1RorDRLP";
   return (
     <motion.div
       className="box"
@@ -117,7 +118,7 @@ const Box0 = ({ giveeVote0,numm }) => {
       animate={control}
     >
       
-        <Cards giveeVotee={giveeVote0} pic={pic0} numm={numm} />
+        <Cards giveeVotee={giveeVote0} pic={pic0} numm={numm} Name="Levi Ackermann" Age="25" Quality ="Great Leader, Fast Reflex, High IQ"/>
     
     </motion.div>
   );
@@ -125,7 +126,7 @@ const Box0 = ({ giveeVote0,numm }) => {
 const Box1 = ({ giveeVote1, numm }) => {
   const control = useAnimation();
   const [ref, inView] = useInView();
-  var pic1= "/Videos/img2.png"
+  var pic1= "https://www.fortressofsolitude.co.za/wp-content/uploads/2023/01/Who-Is-The-Smartest-Anime-Character-.jpg"
   useEffect(() => {
     if (inView) {
       control.start("visible");
@@ -143,7 +144,7 @@ const Box1 = ({ giveeVote1, numm }) => {
       animate={control}
     >
       
-        <Cards giveeVotee={giveeVote1} pic={pic1} numm={numm}/>
+        <Cards giveeVotee={giveeVote1} pic={pic1} numm={numm} Name="L" Age="21" Quality ="Likes to work alone, Fast Reflex, High IQ"/>
       
     </motion.div>
   );
@@ -151,7 +152,7 @@ const Box1 = ({ giveeVote1, numm }) => {
 const Box3 = ({ giveeVote2,numm }) => {
   const control = useAnimation();
   const [ref, inView] = useInView();
-  var pic2= "/Videos/img3.jpg"
+  var pic2= "https://whatfanslove.com/wp-content/uploads/2021/11/Light-Yagami-tile.jpg?ezimgfmt=rs:372x224/rscb57/ngcb57/notWebP"
   useEffect(() => {
     if (inView) {
       control.start("visible");
@@ -169,7 +170,7 @@ const Box3 = ({ giveeVote2,numm }) => {
       animate={control}
     >
      
-        <Cards giveeVotee={giveeVote2}  pic={pic2} numm={numm}/>
+        <Cards giveeVotee={giveeVote2}  pic={pic2} numm={numm} Name="Light Yagami/Kira" Age="20" Quality ="Likes to work alone,High IQ"/>
       
     </motion.div>
   );
@@ -177,7 +178,7 @@ const Box3 = ({ giveeVote2,numm }) => {
 const Box4 = ({ giveeVote3,numm }) => {
   const control = useAnimation();
   const [ref, inView] = useInView();
-  var pic4= "/Videos/img4.jpg"
+  var pic4= "https://i.quotev.com/rsmushnzaaaa.jpg"
   useEffect(() => {
     if (inView) {
       control.start("visible");
@@ -196,7 +197,7 @@ const Box4 = ({ giveeVote3,numm }) => {
     >
     
        
-        <Cards giveeVotee={giveeVote3} pic ={pic4} numm={numm}/>
+        <Cards giveeVotee={giveeVote3} pic ={pic4} numm={numm} Name="Yohan Libert" Age="25" Quality ="Great Manipulator, High IQ, Darkest Evil "/>
       
     </motion.div>
   );

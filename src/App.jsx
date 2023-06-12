@@ -180,8 +180,13 @@ function App() {
     const totalVote_ff= async()=>{
    const {contract, web3}= web3Api;
    const l = await contract.mostVoted();
-   setmostVote(l.words[0]);
-
+  // console.log(l);
+  // setmostVote(l.words[0]);
+   console.log(l);
+    if(l.words[0]===5) setmostVote("Tie, Wait for More Votes");
+    else if(l.words[0]===500)setmostVote("No Votes");
+     else setmostVote(l.words[0]);
+     
    //reloadEffect();
    //console.log(mostVote);
    //console.log(totalVote)
@@ -234,7 +239,7 @@ function App() {
                 {/* <h1>{totalVote? totalVote.words[0]:"hello"}</h1>
                 <button onClick={totalVote_f}>total votes</button> */}
                 {/* <h1>{voted?voted.words[0]:"hello"}</h1> */}
-                <Options accname={  account? account: "not connected"} giveeVote0= {giveVote_f0} giveeVote1= {giveVote_f1} giveeVote2= {giveVote_f3} giveeVote3= {giveVote_f3} totalVotee={totalVote? totalVote:"0"} mostVotee={mostVote? mostVote:"C#01"}/>
+                <Options accname={  account? account: "not connected"} giveeVote0= {giveVote_f0} giveeVote1= {giveVote_f1} giveeVote2= {giveVote_f3} giveeVote3= {giveVote_f3} totalVotee={totalVote? totalVote:"0"} mostVotee={mostVote? mostVote : "Null"}/>
                
             </div>
           </div>

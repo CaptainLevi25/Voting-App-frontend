@@ -43,7 +43,7 @@ const Pagefirst = ({ accname,totalVotee,mostVotee }) => {
       </div>
       <div className="muu2">
 
-          <h1>Most Voted Candidate Till Now- C#{mostVotee}</h1>
+          <h1>Most Voted Candidate -- {mostVotee==="No Votes"||mostVotee==="Tie, Wait for More Votes"?mostVotee:`C#${mostVotee}`}</h1>
           </div>
       </div>
          <div className="middle-lower">
